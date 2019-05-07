@@ -13,5 +13,5 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: install-npm-wee
+          name: test-app
           command: ./node_modules/mocha/bin/mocha
