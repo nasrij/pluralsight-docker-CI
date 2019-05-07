@@ -21,4 +21,4 @@ jobs:
       - run:
           name: deploy-app
           branch: master
-          command: $DOCKER_HUB_TRIG_URL
+          command: curl -X POST -H "Content-Type:application/json" --data '{"build":true}' https://cloud.docker.com/api/build/v1/source/a867f8ea-fe9c-47c5-8aab-d0f4a04f68cb/trigger/0e4950cd-5564-47b7-ba13-c210c5f3eb3c/call/
