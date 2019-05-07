@@ -18,4 +18,4 @@ jobs:
       - run:
           name: deploy-app
           branch: master
-          command: $DOCKER_HUB_TRIG
+          command: $DOCKER_HUB_TRIG_URL
