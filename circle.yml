@@ -16,6 +16,9 @@ jobs:
           name: test-app
           command: ./node_modules/mocha/bin/mocha --exit
       - run:
+          name: display-env
+          command: echo $DOCKER_HUB_TRIG_URL
+      - run:
           name: deploy-app
           branch: master
           command: $DOCKER_HUB_TRIG_URL
