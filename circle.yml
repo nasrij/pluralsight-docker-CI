@@ -4,4 +4,14 @@ jobs:
     docker:
       - image: circleci/node:4.8.2
     steps:
-      - mocha
+      - checkout
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache: # special step to save the dependency cache
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: install-npm-wee
+          command: ./node_modules/mocha/bin/mocha
