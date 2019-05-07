@@ -1,2 +1,5 @@
 version: 2
 jobs:
+  test:
+    override:
+      - mocha
