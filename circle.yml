@@ -14,4 +14,4 @@ jobs:
             - ./node_modules
       - run:
           name: test-app
-          command: ./node_modules/mocha/bin/mocha
+          command: ./node_modules/mocha/bin/mocha --exit
